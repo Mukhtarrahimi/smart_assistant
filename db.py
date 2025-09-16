@@ -6,3 +6,8 @@ DATA_DIR = Path(__file__).parent / 'data'
 DB_PATH = DATA_DIR / 'assistant.db'
 
 DATA_DIR.mkdir(exist_ok=True)
+
+def get_conn():
+    conn = sqlite3.connect(DB_PATH)
+    conn.row_factory = sqlite3.Row
+    return conn
