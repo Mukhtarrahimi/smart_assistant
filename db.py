@@ -26,3 +26,14 @@ def init_db():
     updated_at TEXT NOT NULL
     )
     ''')
+
+    cur.execute('''
+    CREATE TABLE IF NOT EXISTS passwords (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    name TEXT NOT NULL,
+    username TEXT,
+    encrypted_password TEXT NOT NULL,
+    notes TEXT,
+    created_at TEXT NOT NULL
+    )
+    ''')
