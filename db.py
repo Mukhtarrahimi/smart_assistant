@@ -57,3 +57,6 @@ message TEXT,
 created_at TEXT NOT NULL
 )
 ''')
+    
+    conn.commit()
+    conn.close()
