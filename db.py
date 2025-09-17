@@ -37,3 +37,14 @@ def init_db():
     created_at TEXT NOT NULL
     )
     ''')
+
+    cur.execute('''
+CREATE TABLE IF NOT EXISTS reminders (
+id INTEGER PRIMARY KEY AUTOINCREMENT,
+title TEXT NOT NULL,
+details TEXT,
+remind_at TEXT NOT NULL,
+done INTEGER DEFAULT 0,
+created_at TEXT NOT NULL
+)
+''')
