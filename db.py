@@ -48,3 +48,12 @@ done INTEGER DEFAULT 0,
 created_at TEXT NOT NULL
 )
 ''')
+    
+    cur.execute('''
+CREATE TABLE IF NOT EXISTS logs (
+id INTEGER PRIMARY KEY AUTOINCREMENT,
+type TEXT,
+message TEXT,
+created_at TEXT NOT NULL
+)
+''')
