@@ -15,3 +15,14 @@ def get_conn():
 def init_db():
     conn = get_conn()
     cur = conn.cursor()
+
+    cur.execute('''
+    CREATE TABLE IF NOT EXISTS notes (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    title TEXT NOT NULL,
+    content TEXT NOT NULL,
+    tags TEXT,
+    created_at TEXT NOT NULL,
+    updated_at TEXT NOT NULL
+    )
+    ''')
