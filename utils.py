@@ -14,3 +14,6 @@ def now_iso():
 def confirm(prompt='Are you sure? (y/n): '):
     ans = input(prompt).strip().lower()
     return ans in ('y', 'yes')
+
+def human_dt(dt_str):
+    pass
