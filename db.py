@@ -60,3 +60,7 @@ created_at TEXT NOT NULL
     
     conn.commit()
     conn.close()
+
+if __name__ == '__main__':
+    init_db()
+    print('db initialized at', DB_PATH)
