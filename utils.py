@@ -16,4 +16,7 @@ def confirm(prompt='Are you sure? (y/n): '):
     return ans in ('y', 'yes')
 
 def human_dt(dt_str):
-    pass
+    try:
+        return datetime.fromisoformat(dt_str).strftime('%Y-%m-%d %H:%M')
+    except Exception:
+        return dt_str
