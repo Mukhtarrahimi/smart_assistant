@@ -10,3 +10,7 @@ def clear_screen():
 
 def now_iso():
     return datetime.now().isoformat(sep=' ', timespec='seconds')
+
+def confirm(prompt='Are you sure? (y/n): '):
+    ans = input(prompt).strip().lower()
+    return ans in ('y', 'yes')
