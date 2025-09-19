@@ -9,3 +9,9 @@ BASE = Path.cwd()
 def list_files(folder='.'):
     p = Path(folder)
     return [x for x in p.iterdir()]
+
+def copy_file(src, dest):
+    src = Path(src)
+    dest = Path(dest)
+    shutil.copy2(src, dest)
+    return dest
