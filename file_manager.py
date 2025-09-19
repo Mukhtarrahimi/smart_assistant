@@ -15,3 +15,9 @@ def copy_file(src, dest):
     dest = Path(dest)
     shutil.copy2(src, dest)
     return dest
+
+def move_file(src, dest):
+    src = Path(src)
+    dest = Path(dest)
+    shutil.move(str(src), str(dest))
+    return dest
