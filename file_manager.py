@@ -21,3 +21,6 @@ def move_file(src, dest):
     dest = Path(dest)
     shutil.move(str(src), str(dest))
     return dest
+
+def delete_file(path):
+    pass
