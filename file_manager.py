@@ -32,3 +32,9 @@ def delete_file(path):
         shutil.rmtree(p)
         return True
     return False
+
+
+def sort_files_by_extension(folder='.', target_folder=None):
+    folder = Path(folder)
+    target_folder = Path(target_folder) if target_folder else folder
+    moved = []
