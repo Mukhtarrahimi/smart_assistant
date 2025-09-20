@@ -38,3 +38,12 @@ def sort_files_by_extension(folder='.', target_folder=None):
     folder = Path(folder)
     target_folder = Path(target_folder) if target_folder else folder
     moved = []
+    for f in folder.iterdir():
+        if f.is_file():
+            ext = f.suffix.lower().lstrip('.') or 'no_ext'
+            dest_dir = target_folder / ext
+            dest_dir.mkdir(exist_ok=True)
+            dest = dest_dir / f.name
+            shutil.move(str(f), str(dest))
+            moved.append((str(f), str(dest)))
+    return moved
