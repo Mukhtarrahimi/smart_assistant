@@ -23,4 +23,12 @@ def move_file(src, dest):
     return dest
 
 def delete_file(path):
-    pass
+    p = Path(path)
+    if p.exists():
+        if p.is_file():
+            p.unlink()
+            return True
+    elif p.is_dir():
+        shutil.rmtree(p)
+        return True
+    return False
