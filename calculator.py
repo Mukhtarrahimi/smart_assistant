@@ -15,3 +15,4 @@ ALLOWED_OPERATORS = {
 
 ALLOWED_FUNCS = {k: getattr(math, k) for k in dir(math) if not k.startswith('_')}
 ALLOWED_NAMES = {'pi': math.pi, 'e': math.e}
+ALLOWED_NAMES.update(ALLOWED_FUNCS)
