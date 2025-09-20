@@ -47,3 +47,6 @@ def sort_files_by_extension(folder='.', target_folder=None):
             shutil.move(str(f), str(dest))
             moved.append((str(f), str(dest)))
     return moved
+
+if __name__ == '__main__':
+    print(list_files('.'))
