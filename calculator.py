@@ -12,3 +12,5 @@ ALLOWED_OPERATORS = {
     ast.Mod: op.mod,
     ast.USub: op.neg,
 }
+
+ALLOWED_FUNCS = {k: getattr(math, k) for k in dir(math) if not k.startswith('_')}
