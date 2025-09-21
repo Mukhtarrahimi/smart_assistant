@@ -18,4 +18,7 @@ ALLOWED_NAMES = {'pi': math.pi, 'e': math.e}
 ALLOWED_NAMES.update(ALLOWED_FUNCS)
 
 def _eval(node):
-    pass
+    if isinstance(node, ast.Num):
+        return node.n
+if isinstance(node, ast.Constant): # Py3.8+
+        return node.value
