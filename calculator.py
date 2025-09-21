@@ -29,3 +29,10 @@ def _eval(node):
     if isinstance(node, ast.UnaryOp):
         operand = _eval(node.operand)
         return ALLOWED_OPERATORS[type(node.op)](operand)
+    if isinstance(node, ast.Call):
+        func = node.func.id
+        if func in ALLOWED_NAMES:
+            args = [_eval(a) for a in node.args]
+            return ALLOWED_NAMES[func](*args)
+        else:
+            raise ValueError(f'Function {func} not allowed')
