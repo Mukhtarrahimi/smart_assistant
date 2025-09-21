@@ -20,5 +20,12 @@ ALLOWED_NAMES.update(ALLOWED_FUNCS)
 def _eval(node):
     if isinstance(node, ast.Num):
         return node.n
-if isinstance(node, ast.Constant): # Py3.8+
+    if isinstance(node, ast.Constant): # Py3.8+
         return node.value
+    if isinstance(node, ast.BinOp):
+        left = _eval(node.left)
+        right = _eval(node.right)
+        return ALLOWED_OPERATORS[type(node.op)](left, right)
+    if isinstance(node, ast.UnaryOp):
+        operand = _eval(node.operand)
+        return ALLOWED_OPERATORS[type(node.op)](operand)
