@@ -36,3 +36,9 @@ def _eval(node):
             return ALLOWED_NAMES[func](*args)
         else:
             raise ValueError(f'Function {func} not allowed')
+    if isinstance(node, ast.Name):
+        if node.id in ALLOWED_NAMES:
+            return ALLOWED_NAMES[node.id]
+        else:
+            raise ValueError(f'Name {node.id} is not allowed')
+    raise TypeError(node)
