@@ -55,3 +55,5 @@ if __name__ == '__main__':
             if s.strip().lower() in ('exit', 'quit'):
                 break
             print(safe_eval(s))
+        except Exception as e:
+            print('Error:', e)
