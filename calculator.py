@@ -50,4 +50,8 @@ def safe_eval(expr):
 
 if __name__ == '__main__':
     while True:
-        pass
+        try:
+            s = input('expr> ')
+            if s.strip().lower() in ('exit', 'quit'):
+                break
+            print(safe_eval(s))
