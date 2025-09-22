@@ -49,4 +49,5 @@ def safe_eval(expr):
     return _eval(node)
 
 if __name__ == '__main__':
-    pass
+    while True:
+        pass
