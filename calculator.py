@@ -47,3 +47,6 @@ def safe_eval(expr):
     expr = expr.strip()
     node = ast.parse(expr, mode='eval').body
     return _eval(node)
+
+if __name__ == '__main__':
+    pass
