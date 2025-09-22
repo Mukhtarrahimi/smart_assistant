@@ -42,3 +42,6 @@ def _eval(node):
         else:
             raise ValueError(f'Name {node.id} is not allowed')
     raise TypeError(node)
+
+def safe_eval(expr):
+    pass
