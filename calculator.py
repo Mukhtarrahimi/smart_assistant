@@ -44,4 +44,6 @@ def _eval(node):
     raise TypeError(node)
 
 def safe_eval(expr):
-    pass
+    expr = expr.strip()
+    node = ast.parse(expr, mode='eval').body
+    return _eval(node)
