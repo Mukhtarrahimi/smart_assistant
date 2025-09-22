@@ -43,11 +43,13 @@ def _eval(node):
             raise ValueError(f'Name {node.id} is not allowed')
     raise TypeError(node)
 
+# ---
 def safe_eval(expr):
     expr = expr.strip()
     node = ast.parse(expr, mode='eval').body
     return _eval(node)
 
+# ---
 if __name__ == '__main__':
     while True:
         try:
