@@ -13,5 +13,6 @@ from utils import now_iso
 DATA_DIR = Path(__file__).parent / 'data'
 SALT_PATH = DATA_DIR / 'master_salt.bin'
 
+# functions-----
 def _ensure_salt():
     DATA_DIR.mkdir(exist_ok=True)
