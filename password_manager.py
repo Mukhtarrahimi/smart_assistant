@@ -16,3 +16,5 @@ SALT_PATH = DATA_DIR / 'master_salt.bin'
 # functions-----
 def _ensure_salt():
     DATA_DIR.mkdir(exist_ok=True)
+    if not SALT_PATH.exists():
+        SALT_PATH.write_bytes(os.urandom(16))
