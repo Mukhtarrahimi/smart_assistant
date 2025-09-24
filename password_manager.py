@@ -22,3 +22,10 @@ def _ensure_salt():
 def derive_key_from_password(password: str) -> bytes:
     _ensure_salt()
     salt = SALT_PATH.read_bytes()
+    kdf = PBKDF2HMAC(
+algorithm=hashes.SHA256(),
+length=32,
+salt=salt,
+iterations=390000,
+backend=default_backend()
+)
