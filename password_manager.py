@@ -18,3 +18,6 @@ def _ensure_salt():
     DATA_DIR.mkdir(exist_ok=True)
     if not SALT_PATH.exists():
         SALT_PATH.write_bytes(os.urandom(16))
+
+def derive_key_from_password(password: str) -> bytes:
+    pass
