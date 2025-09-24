@@ -20,4 +20,5 @@ def _ensure_salt():
         SALT_PATH.write_bytes(os.urandom(16))
 
 def derive_key_from_password(password: str) -> bytes:
-    pass
+    _ensure_salt()
+    salt = SALT_PATH.read_bytes()
