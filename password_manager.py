@@ -42,3 +42,5 @@ def add_password(master_password, name, username, plaintext_password, notes=''):
     cur = conn.cursor()
     cur.execute('INSERT INTO passwords (name, username, encrypted_password, notes, created_at) VALUES (?, ?, ?, ?, ?)',
     (name, username, token.decode(), notes, now_iso()))
+    conn.commit()
+    conn.close()
