@@ -44,3 +44,8 @@ def add_password(master_password, name, username, plaintext_password, notes=''):
     (name, username, token.decode(), notes, now_iso()))
     conn.commit()
     conn.close()
+
+
+
+def list_passwords():
+    pass
