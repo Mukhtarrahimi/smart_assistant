@@ -48,4 +48,5 @@ def add_password(master_password, name, username, plaintext_password, notes=''):
 
 
 def list_passwords():
-    pass
+    conn = get_conn()
+    cur = conn.cursor()
