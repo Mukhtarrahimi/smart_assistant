@@ -38,3 +38,7 @@ def add_password(master_password, name, username, plaintext_password, notes=''):
     key = derive_key_from_password(master_password)
     f = Fernet(key)
     token = f.encrypt(plaintext_password.encode())
+    conn = get_conn()
+    cur = conn.cursor()
+    cur.execute('INSERT INTO passwords (name, username, encrypted_password, notes, created_at) VALUES (?, ?, ?, ?, ?)',
+    (name, username, token.decode(), notes, now_iso()))
