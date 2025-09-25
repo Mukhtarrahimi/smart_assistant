@@ -52,3 +52,5 @@ def list_passwords():
     cur = conn.cursor()
     cur.execute('SELECT id, name, username, created_at FROM passwords')
     rows = cur.fetchall()
+    conn.close()
+    return rows
