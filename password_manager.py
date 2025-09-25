@@ -29,3 +29,6 @@ salt=salt,
 iterations=390000,
 backend=default_backend()
 )
+    
+    key = base64.urlsafe_b64encode(kdf.derive(password.encode()))
+    return key
