@@ -35,4 +35,6 @@ backend=default_backend()
 
 
 def add_password(master_password, name, username, plaintext_password, notes=''):
-    pass
+    key = derive_key_from_password(master_password)
+    f = Fernet(key)
+    token = f.encrypt(plaintext_password.encode())
