@@ -50,3 +50,5 @@ def add_password(master_password, name, username, plaintext_password, notes=''):
 def list_passwords():
     conn = get_conn()
     cur = conn.cursor()
+    cur.execute('SELECT id, name, username, created_at FROM passwords')
+    rows = cur.fetchall()
