@@ -46,7 +46,7 @@ def add_password(master_password, name, username, plaintext_password, notes=''):
     conn.close()
 
 
-
+# ---
 def list_passwords():
     conn = get_conn()
     cur = conn.cursor()
