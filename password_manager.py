@@ -32,3 +32,7 @@ backend=default_backend()
     
     key = base64.urlsafe_b64encode(kdf.derive(password.encode()))
     return key
+
+
+def add_password(master_password, name, username, plaintext_password, notes=''):
+    pass
