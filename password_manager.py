@@ -68,3 +68,5 @@ def get_password(master_password, entry_id):
     token = r['encrypted_password'].encode()
     try:
         return f.decrypt(token).decode()
+    except Exception:
+        raise ValueError('Master password incorrect or data corrupted')
