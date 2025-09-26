@@ -66,3 +66,5 @@ def get_password(master_password, entry_id):
     if not r:
         return None
     token = r['encrypted_password'].encode()
+    try:
+        return f.decrypt(token).decode()
