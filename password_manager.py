@@ -65,3 +65,4 @@ def get_password(master_password, entry_id):
     conn.close()
     if not r:
         return None
+    token = r['encrypted_password'].encode()
