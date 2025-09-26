@@ -60,3 +60,6 @@ def get_password(master_password, entry_id):
     f = Fernet(key)
     conn = get_conn()
     cur = conn.cursor()
+    cur.execute('SELECT encrypted_password FROM passwords WHERE id=?', (entry_id,))
+    r = cur.fetchone()
+    conn.close()
