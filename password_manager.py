@@ -58,3 +58,5 @@ def list_passwords():
 def get_password(master_password, entry_id):
     key = derive_key_from_password(master_password)
     f = Fernet(key)
+    conn = get_conn()
+    cur = conn.cursor()
