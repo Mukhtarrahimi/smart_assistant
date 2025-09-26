@@ -54,3 +54,6 @@ def list_passwords():
     rows = cur.fetchall()
     conn.close()
     return rows
+
+def get_password(master_password, entry_id):
+    pass
