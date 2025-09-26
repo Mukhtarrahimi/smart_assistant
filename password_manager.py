@@ -63,3 +63,5 @@ def get_password(master_password, entry_id):
     cur.execute('SELECT encrypted_password FROM passwords WHERE id=?', (entry_id,))
     r = cur.fetchone()
     conn.close()
+    if not r:
+        return None
