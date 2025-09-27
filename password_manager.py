@@ -75,3 +75,5 @@ def delete_password(entry_id):
     conn = get_conn()
     cur = conn.cursor()
     cur.execute('DELETE FROM passwords WHERE id=?', (entry_id,))
+    conn.commit()
+    conn.close()
