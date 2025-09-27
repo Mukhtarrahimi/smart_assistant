@@ -72,4 +72,5 @@ def get_password(master_password, entry_id):
         raise ValueError('Master password incorrect or data corrupted')
     
 def delete_password(entry_id):
-    pass
+    conn = get_conn()
+    cur = conn.cursor()
