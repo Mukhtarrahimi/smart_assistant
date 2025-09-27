@@ -70,3 +70,6 @@ def get_password(master_password, entry_id):
         return f.decrypt(token).decode()
     except Exception:
         raise ValueError('Master password incorrect or data corrupted')
+    
+def delete_password(entry_id):
+    pass
