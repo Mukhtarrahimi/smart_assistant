@@ -80,4 +80,4 @@ def delete_password(entry_id):
     conn.close()
 
 if __name__ == '__main__':
-    pass
+    print('password manager module - run via main')
