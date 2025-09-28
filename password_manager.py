@@ -78,3 +78,6 @@ def delete_password(entry_id):
     cur.execute('DELETE FROM passwords WHERE id=?', (entry_id,))
     conn.commit()
     conn.close()
+
+if __name__ == '__main__':
+    pass
