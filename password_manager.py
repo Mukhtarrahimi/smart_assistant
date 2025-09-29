@@ -34,6 +34,8 @@ backend=default_backend()
     return key
 
 
+# 
+
 def add_password(master_password, name, username, plaintext_password, notes=''):
     key = derive_key_from_password(master_password)
     f = Fernet(key)
