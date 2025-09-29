@@ -55,6 +55,7 @@ def list_passwords():
     conn.close()
     return rows
 
+# 
 def get_password(master_password, entry_id):
     key = derive_key_from_password(master_password)
     f = Fernet(key)
