@@ -19,6 +19,7 @@ def _ensure_salt():
     if not SALT_PATH.exists():
         SALT_PATH.write_bytes(os.urandom(16))
 
+# 
 def derive_key_from_password(password: str) -> bytes:
     _ensure_salt()
     salt = SALT_PATH.read_bytes()
