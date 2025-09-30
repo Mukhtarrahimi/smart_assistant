@@ -14,3 +14,5 @@ def add_note(title, content, tags=''):
 def list_notes():
     conn = get_conn()
     cur = conn.cursor()
+    cur.execute('SELECT id, title, tags, created_at, updated_at FROM notes ORDER BY created_at DESC')
+    rows = cur.fetchall()
