@@ -10,3 +10,6 @@ def add_note(title, content, tags=''):
     (title, content, tags, t, t))
     conn.commit()
     conn.close()
+
+def list_notes():
+    pass
