@@ -35,3 +35,5 @@ def search_notes(query):
     q = f"%{query}%"
     cur.execute('SELECT id, title, tags, created_at FROM notes WHERE title LIKE ? OR content LIKE ? OR tags LIKE ? ORDER BY created_at DESC', (q, q, q))
     rows = cur.fetchall()
+    conn.close()
+    return rows
