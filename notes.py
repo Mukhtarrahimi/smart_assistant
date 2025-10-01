@@ -24,3 +24,4 @@ def list_notes():
 def get_note(note_id):
     conn = get_conn()
     cur = conn.cursor()
+    cur.execute('SELECT * FROM notes WHERE id=?', (note_id,))
