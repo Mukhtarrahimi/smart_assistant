@@ -22,4 +22,5 @@ def list_notes():
     return rows
 
 def get_note(note_id):
-    pass
+    conn = get_conn()
+    cur = conn.cursor()
