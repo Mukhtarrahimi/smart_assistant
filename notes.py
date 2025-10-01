@@ -28,3 +28,6 @@ def get_note(note_id):
     r = cur.fetchone()
     conn.close()
     return r
+
+def search_notes(query):
+    pass
