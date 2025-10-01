@@ -29,6 +29,7 @@ def get_note(note_id):
     conn.close()
     return r
 
+# -----
 def search_notes(query):
     conn = get_conn()
     cur = conn.cursor()
