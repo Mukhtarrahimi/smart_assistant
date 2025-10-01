@@ -20,3 +20,6 @@ def list_notes():
     rows = cur.fetchall()
     conn.close()
     return rows
+
+def get_note(note_id):
+    pass
