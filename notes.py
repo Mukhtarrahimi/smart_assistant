@@ -30,4 +30,6 @@ def get_note(note_id):
     return r
 
 def search_notes(query):
-    pass
+    conn = get_conn()
+    cur = conn.cursor()
+    q = f"%{query}%"
