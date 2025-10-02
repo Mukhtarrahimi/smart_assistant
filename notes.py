@@ -38,3 +38,7 @@ def search_notes(query):
     rows = cur.fetchall()
     conn.close()
     return rows
+
+
+def delete_note(note_id):
+    pass
