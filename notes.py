@@ -46,3 +46,6 @@ def delete_note(note_id):
     cur.execute('DELETE FROM notes WHERE id=?', (note_id,))
     conn.commit()
     conn.close()
+
+if __name__ == '__main__':
+    pass
