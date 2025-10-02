@@ -48,4 +48,4 @@ def delete_note(note_id):
     conn.close()
 
 if __name__ == '__main__':
-    pass
+    print('notes module - use via main')
