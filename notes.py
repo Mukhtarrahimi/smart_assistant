@@ -44,3 +44,4 @@ def delete_note(note_id):
     conn = get_conn()
     cur = conn.cursor()
     cur.execute('DELETE FROM notes WHERE id=?', (note_id,))
+    conn.commit()
