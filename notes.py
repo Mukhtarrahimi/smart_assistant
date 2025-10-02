@@ -41,4 +41,5 @@ def search_notes(query):
 
 
 def delete_note(note_id):
-    pass
+    conn = get_conn()
+    cur = conn.cursor()
