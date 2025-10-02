@@ -39,7 +39,7 @@ def search_notes(query):
     conn.close()
     return rows
 
-
+# ------
 def delete_note(note_id):
     conn = get_conn()
     cur = conn.cursor()
