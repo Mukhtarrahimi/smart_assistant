@@ -16,3 +16,5 @@ def list_notes():
     cur = conn.cursor()
     cur.execute('SELECT id, title, tags, created_at, updated_at FROM notes ORDER BY created_at DESC')
     rows = cur.fetchall()
+    conn.close()
+    return rows
