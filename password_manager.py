@@ -7,3 +7,6 @@ import os
 from pathlib import Path
 from db import get_conn
 from utils import now_iso
+
+DATA_DIR = Path(__file__).parent / 'data'
+SALT_PATH = DATA_DIR / 'master_salt.bin'
