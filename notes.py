@@ -11,6 +11,7 @@ def add_note(title, content, tags=''):
     conn.commit()
     conn.close()
 
+# -----
 def list_notes():
     conn = get_conn()
     cur = conn.cursor()
